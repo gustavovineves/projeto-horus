@@ -1,0 +1,162 @@
+@use '../../_partials/_config.scss' as *;
+
+#container_listagemArtigos{
+  #container_verMais{
+    width: 100%;
+    display: flex;
+
+    .vermais{
+      background: #19376D;
+      font-family: $fonte-1;
+    }
+  }
+
+  #container_wrapper{
+    display: grid;
+    max-width: 70%;
+    margin: 0 auto;
+    grid-template-columns: .5fr 2fr;
+    
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+    }
+
+    #container_filtro{
+      position: sticky;
+      top: 5%;
+      height: fit-content;
+      border-radius: 0 40px 40px 0;
+      overflow: hidden;
+      z-index: 10;
+
+      @media (max-width: 500px) {
+        border-radius: 0;
+      }
+
+      #container_pesquisa{
+        position: relative;
+        background: $cor-2;
+        padding: $esp-m;
+
+        input{
+          width: 75%;
+          height: 100%;
+          background: transparent;
+          border: none;
+          outline: none;
+          font-family: $fonte-2;
+        }
+
+        input::placeholder{
+          font-family: $fonte-2;
+        }
+
+        i{
+          position: absolute;
+          right: 10%;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+        }
+      }
+
+      #filtros{
+        padding-inline: $esp-xg;
+        padding-block: $esp-p ;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        background: $cor-4;
+        transition: 500ms;
+        //max-height: 110px;
+        font-family: $fonte-2;
+        padding-bottom: 2rem;
+
+        @media (max-width: 500px) {
+          #filtro_titulo{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+          }
+          #btn_expandeFiltro{
+            display: block !important;
+            color: white;
+            font-size: 1.5rem;
+            margin-left: $esp-m;
+          }
+
+          a:not(a:first-child){
+            display: none;
+          }
+
+          .filtro-aberto{
+            display: initial !important;
+          }
+        }
+
+        #btn_expandeFiltro{
+          display: none;
+          transition: 300ms;
+        }
+
+        a{
+          padding: $esp-p;
+          transition: 200ms;
+          width: 80%;
+          text-align: right;
+          opacity: 0;
+          animation: showing 500ms forwards;
+        }
+
+        .filtro-ativo{
+          background: $cor-5;
+          color: #19376D;
+        }
+
+        a:first-child{
+          font-size: $font-tamanho-p;
+          padding-block: $esp-pp;
+          font-weight: bolder;
+        }
+
+        a:not(a:first-child):hover{
+          background: $cor-3;
+          color: white;
+          width: 100%;
+        }
+
+        a:nth-child(4), a:nth-child(6){
+          padding-bottom: $esp-m;
+          margin-bottom: $esp-m;
+          position: relative;
+        }
+
+        a:nth-child(4):after, a:nth-child(6):after{
+          position: absolute;
+          content: '';
+          background: white;
+          height: 2px;
+          width: 40px;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+    #container_listagem{
+      display: flex;
+      flex-wrap: wrap;
+      padding: $esp-p;
+      gap: 5%;
+    }
+  }
+}
+
+
+.btn-rotate{
+  transform: rotate(180deg);
+}
+
+.filtros-aberto{
+  max-height: 1000px !important;
+}

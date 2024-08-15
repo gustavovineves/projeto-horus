@@ -1,0 +1,59 @@
+@use '../../../../../_partials/config' as *;
+
+#container_user{
+  .content{
+    @media (max-width: 1190px){
+      flex-direction: column-reverse !important;
+    }
+
+    .containerCarrousel .carrouselButtons svg{
+      color: $cor-3 ;
+
+    }
+  }
+}
+
+#container_user{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $cor-2;
+    left: 0;
+    top: 0;
+    clip-path: polygon(0 74%, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
+  }
+
+
+
+  #container_fiquePorDentro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-inline: 3rem;
+
+    img{
+      opacity: 0;
+      animation: show 400ms 500ms forwards;
+      z-index: -1;
+      position: relative;
+    }
+  }
+}
+
+@keyframes showFiquePorDentro {
+    100%{
+      margin-top: -10%;
+      opacity: 1;
+  }
+}
+
+@keyframes show {
+  100%{
+    opacity: 1;
+  }
+}

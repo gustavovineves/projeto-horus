@@ -1,0 +1,39 @@
+@use '../../../../../_partials/config' as *;
+
+#container_developer{
+  background-image: $gradiente;
+  .content{
+    #container_developer_name{
+      display: flex;
+      text-transform: uppercase;
+      flex-direction: column;
+      font-family: $fonte-1;
+      align-items: center;
+      color: white;
+
+      @media (max-width: 870px){
+        margin-bottom: 2rem;
+      }
+
+      h1{
+        font-size: 17.5rem;
+        line-height: .75;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        margin: 0 0 2rem;
+
+        span:nth-child(2){
+          display: block;
+          margin-left: 2.5rem;
+        }
+
+        @media (max-width: 870px){
+          span:nth-child(2), span:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+}

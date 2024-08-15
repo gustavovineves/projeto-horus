@@ -1,0 +1,92 @@
+@keyframes showArtigo {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#main-materia {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: showArtigo 500ms 300ms forwards;
+}
+
+#header-artigo picture {
+  width: 100%;
+  display: block;
+  max-height: 30vh;
+}
+#header-artigo picture img {
+  max-height: 30vh;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+#header-artigo #header-content {
+  width: 70%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#header-artigo #header-content #materia_header {
+  margin-block: 5%;
+}
+#header-artigo #header-content #materia_header #h1-detalhe {
+  position: relative;
+}
+#header-artigo #header-content #materia_header #h1-detalhe h1 {
+  font-family: "Bebas Neue", sans-serif;
+  background: #ffffff;
+  padding-right: 10px;
+  width: fit-content;
+  font-size: 3rem;
+  margin-block: 0;
+}
+#header-artigo #header-content #materia_header #h1-detalhe:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2C74B3;
+  z-index: -1;
+}
+#header-artigo #header-content #materia_header p {
+  background: #FFC01F;
+  padding: 1% 1.5%;
+  width: fit-content;
+  text-transform: capitalize;
+  font-family: "Gantari", sans-serif !important;
+}
+
+#container_materia {
+  margin-bottom: 5%;
+}
+#container_materia #container_content {
+  width: 70%;
+  margin: 0 auto;
+  min-height: 50vh;
+  max-width: 900px;
+  text-align: justify;
+}
+#container_materia #container_content ul {
+  margin-block: 2rem;
+  line-height: 1.5rem;
+  font-family: "Gantari", sans-serif !important;
+}
+#container_materia #container_content h1 {
+  font-family: "Bebas Neue", sans-serif;
+  margin-block: 32px;
+  font-size: 32px;
+}
+#container_materia #container_content p {
+  font-family: "Roboto Serif", serif;
+  line-height: 1.7;
+  text-align: justify;
+}
+#container_materia #container_content .container_imgArtigo {
+  margin-block: 3%;
+  display: block;
+}
+
+/*# sourceMappingURL=artigo.css.map */

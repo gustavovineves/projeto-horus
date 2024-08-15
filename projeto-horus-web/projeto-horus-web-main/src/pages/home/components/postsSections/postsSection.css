@@ -1,0 +1,57 @@
+.postSection {
+  /*margin-block: 2rem;*/
+  overflow: hidden;
+}
+.postSection .content {
+  max-width: 75rem;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 1rem;
+}
+@media (max-width: 1190px) {
+  .postSection .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.postSection .content .containerName {
+  width: 28rem;
+  min-width: 25rem;
+}
+.postSection .content .containerCarrousel {
+  flex: 1;
+}
+.postSection .content .containerCarrousel .carrousel {
+  max-width: 47rem;
+  height: 90%;
+  padding-top: 2rem;
+}
+@media (max-width: 780px) {
+  .postSection .content .containerCarrousel .carrousel {
+    max-width: 23rem;
+  }
+}
+.postSection .content .containerCarrousel .carrousel .card_artigo {
+  min-width: 23rem !important;
+}
+.postSection .content .containerCarrousel .carrousel .card_artigo:hover {
+  transform: translateY(-10px);
+}
+.postSection .content .containerCarrousel .carrouselButtons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.postSection .content .containerCarrousel .carrouselButtons svg {
+  cursor: pointer;
+  padding: 1rem;
+  color: white;
+  box-sizing: content-box;
+  transition: 400ms;
+}
+.postSection .content .containerCarrousel .carrouselButtons svg:hover {
+  transform: translateY(-10px);
+}
+
+/*# sourceMappingURL=postsSection.css.map */

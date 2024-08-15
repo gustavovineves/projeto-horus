@@ -1,0 +1,110 @@
+@use '../../_partials/_config.scss' as *;
+
+@keyframes showArtigo {
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.card_artigo
+{
+  min-width: 24rem;
+  border-radius: 40px 0 40px 0;
+  overflow: hidden;
+  width: 30%;
+  background: $cor-2;
+  margin-bottom: $esp-p;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    margin-bottom: $esp-xg;
+  }
+
+  picture{
+    display: block;
+    height: 300px;
+    //background: blue;
+
+    .loaded{
+      animation: show 500ms forwards;
+    }
+    img{
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+    }
+  }
+
+  .card_body{
+    padding: $esp-m;
+
+    header{
+      padding-bottom: $esp-pp;
+      margin-bottom: $esp-p;
+
+      position: relative;
+      h2{
+        font-family: $fonte-1 ;
+        font-size: $font-tamanho-m;
+      }
+      h3{
+        font-family: $fonte-2 ;
+        font-weight: normal;
+        margin-block:  0 $esp-p;
+      }
+    }
+
+    header:after{
+      content: '';
+      position: absolute;
+      height: 5px;
+      width: 70px;
+      background: $cor-4;
+      bottom: 0;
+      left: 0;
+    }
+
+    .container_artigo_desc{
+      position: relative;
+      margin-bottom: $esp-m;
+
+      .artigo_desc{
+        font-size: $font-tamanho-pp;
+        display: block;
+        line-height: 1.4rem;
+        height: calc( 5 * $font-tamanho-pp * 1.4);
+        overflow: hidden;
+        font-family: $fonte-3;
+      }
+    }
+
+    .container_artigo_desc:after{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(0deg, $cor-2 10%, rgba(0, 0, 255, 0));
+    }
+
+    .btn_lerMais{
+      margin-top: $esp-m;
+      width: 40%;
+      background: black;
+      text-align: center;
+      background: $cor-4;
+      padding: $esp-m;
+      display: block;
+      border-radius: 0px  0px 5px;
+      font-family: $fonte-2;
+      transition: 400ms;
+
+      &:hover{
+        background: $cor-5;
+      }
+    }
+  }
+}

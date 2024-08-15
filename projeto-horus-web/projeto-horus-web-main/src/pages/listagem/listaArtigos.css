@@ -1,0 +1,150 @@
+#container_listagemArtigos #container_verMais {
+  width: 100%;
+  display: flex;
+  margin-bottom: 200px;
+}
+#container_listagemArtigos #container_verMais .vermais {
+  background: #19376D;
+  font-family: "Bebas Neue", sans-serif;
+}
+#container_listagemArtigos #container_wrapper {
+  display: grid;
+  max-width: 70%;
+  margin: 0 auto;
+  grid-template-columns: 0.5fr 2fr;
+}
+@media (max-width: 500px) {
+  #container_listagemArtigos #container_wrapper {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+#container_listagemArtigos #container_wrapper #container_filtro{
+      top: 0 !important;
+  }
+}
+  
+#container_listagemArtigos #container_wrapper #container_filtro {
+  position: sticky;
+  top: 5%;
+  height: fit-content;
+  border-radius: 0 40px 40px 0;
+  overflow: hidden;
+  z-index: 10;
+}
+@media (max-width: 500px) {
+  #container_listagemArtigos #container_wrapper #container_filtro {
+    border-radius: 0;
+  }
+}
+#container_listagemArtigos #container_wrapper #container_filtro #container_pesquisa {
+  position: relative;
+  background: #F1F6F9;
+  padding: 5%;
+}
+#container_listagemArtigos #container_wrapper #container_filtro #container_pesquisa input {
+  width: 75%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: "Gantari", sans-serif;
+}
+#container_listagemArtigos #container_wrapper #container_filtro #container_pesquisa input::placeholder {
+  font-family: "Gantari", sans-serif;
+}
+#container_listagemArtigos #container_wrapper #container_filtro #container_pesquisa i {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+#container_listagemArtigos #container_wrapper #container_filtro #filtros {
+  padding-inline: 12%;
+  padding-block: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background: #19376D;
+  transition: 500ms;
+  font-family: "Gantari", sans-serif;
+  padding-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  #container_listagemArtigos #container_wrapper #container_filtro #filtros #filtro_titulo {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  #container_listagemArtigos #container_wrapper #container_filtro #filtros #btn_expandeFiltro {
+    display: block !important;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 5%;
+  }
+  #container_listagemArtigos #container_wrapper #container_filtro #filtros a:not(a:first-child) {
+    display: none;
+  }
+  #container_listagemArtigos #container_wrapper #container_filtro #filtros .filtro-aberto {
+    display: initial !important;
+  }
+}
+#container_listagemArtigos #container_wrapper #container_filtro #filtros #btn_expandeFiltro {
+  display: none;
+  transition: 300ms;
+}
+#container_listagemArtigos #container_wrapper #container_filtro #filtros a {
+  padding: 3%;
+  transition: 200ms;
+  width: 80%;
+  text-align: right;
+  opacity: 0;
+  animation: showing 500ms forwards;
+}
+#container_listagemArtigos #container_wrapper #container_filtro #filtros .filtro-ativo {
+  background: #FFC01F;
+  color: #19376D;
+}
+#container_listagemArtigos #container_wrapper #container_filtro #filtros a:first-child {
+  font-size: 1.5rem;
+  padding-block: 1.5%;
+  font-weight: bolder;
+}
+#container_listagemArtigos #container_wrapper #container_filtro #filtros a:not(a:first-child):hover {
+  background: #2C74B3;
+  color: white;
+  width: 100%;
+}
+#container_listagemArtigos #container_wrapper #container_filtro #filtros a:nth-child(4), #container_listagemArtigos #container_wrapper #container_filtro #filtros a:nth-child(6) {
+  padding-bottom: 5%;
+  margin-bottom: 5%;
+  position: relative;
+}
+#container_listagemArtigos #container_wrapper #container_filtro #filtros a:nth-child(4):after, #container_listagemArtigos #container_wrapper #container_filtro #filtros a:nth-child(6):after {
+  position: absolute;
+  content: "";
+  background: white;
+  height: 2px;
+  width: 40px;
+  bottom: 0;
+  right: 0;
+}
+#container_listagemArtigos #container_wrapper #container_listagem {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3%;
+  gap: 5%;
+}
+
+.btn-rotate {
+  transform: rotate(180deg);
+}
+
+.filtros-aberto {
+  max-height: 1000px !important;
+}
+
+/*# sourceMappingURL=listaArtigos.css.map */

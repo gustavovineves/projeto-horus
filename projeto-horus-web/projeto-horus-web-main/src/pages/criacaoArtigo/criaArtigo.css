@@ -1,0 +1,75 @@
+@keyframes show {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#criaArtigoContainer h1 {
+  font-size: 2rem;
+  font-family: "Bebas Neue", sans-serif;
+}
+#criaArtigoContainer h2 {
+  font-family: "Bebas Neue", sans-serif;
+  color: green;
+  opacity: 0;
+  animation: show 400ms forwards;
+}
+#criaArtigoContainer section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+#criaArtigoContainer section form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block: 2rem;
+  width: 50%;
+}
+#criaArtigoContainer section form div .error {
+  border: 2px solid red;
+}
+#criaArtigoContainer section form div p {
+  margin-top: 1rem;
+  color: red;
+}
+#criaArtigoContainer section form div span {
+  opacity: 0.6;
+  font-style: italic;
+  display: block;
+  margin-top: 1rem;
+}
+#criaArtigoContainer section form div label, #criaArtigoContainer section form div p, #criaArtigoContainer section form div textarea, #criaArtigoContainer section form div select, #criaArtigoContainer section form div option, #criaArtigoContainer section form div input[type=file], #criaArtigoContainer section form div input, #criaArtigoContainer section form div input::placeholder {
+  font-family: "Gantari", sans-serif;
+}
+#criaArtigoContainer section form div select, #criaArtigoContainer section form div option, #criaArtigoContainer section form div input {
+  cursor: pointer;
+  width: 100%;
+}
+#criaArtigoContainer section form div label {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+#criaArtigoContainer section form div input, #criaArtigoContainer section form div option, #criaArtigoContainer section form div select, #criaArtigoContainer section form div textarea {
+  padding: 0.5rem;
+  background: #F1F6F9;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+}
+#criaArtigoContainer section form div textarea {
+  width: 100%;
+  padding: 1rem;
+  height: 50ch;
+  resize: none;
+}
+#criaArtigoContainer section form #formButton {
+  padding: 1rem;
+  background: #19376D;
+  font-family: "Gantari", sans-serif;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=criaArtigo.css.map */

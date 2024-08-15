@@ -1,0 +1,23 @@
+#container_fiquePorDentro a, .container_noControle a, #container_developer_name a {
+  animation: showFiquePorDentro 500ms 500ms forwards;
+  width: 100%;
+  margin-top: 0;
+  opacity: 0;
+  text-align: center;
+  background: #19376D;
+  padding: 1.25rem 1.75rem;
+  font-family: "Gantari", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+#container_developer_name a {
+  font-size: 3rem;
+  opacity: 0.6 !important;
+  font-weight: normal;
+  letter-spacing: 1.2px;
+  font-family: "Bebas Neue", sans-serif;
+  background: none;
+}
+
+/*# sourceMappingURL=home.css.map */

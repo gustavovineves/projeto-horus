@@ -1,0 +1,94 @@
+@use '../../_partials/_config.scss' as *;
+$tamanho-conteudo-global: 70%;
+
+@keyframes show {
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#criaArtigoContainer{
+
+  h1{
+    font-size: 2rem;
+    font-family: $fonte-1;
+  }
+
+  h2{
+    font-family: $fonte-1;
+    color: green;
+    opacity: 0;
+    animation: show 400ms forwards;
+  }
+
+  section{
+    max-width: 900px;
+    margin: 0 auto;
+
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-block: 2rem;
+      width: 50%;
+
+      div{
+        .error{
+          border: 2px solid red;
+        }
+
+        p{
+          margin-top: 1rem;
+          color: red;
+        }
+
+        span{
+          opacity: .6;
+          font-style: italic;
+          display: block;
+          margin-top: 1rem;
+        }
+
+        label, p, textarea, select, option, input[type='file'],input, input::placeholder{
+          font-family: $fonte-2;
+        }
+
+        select, option, input{
+          cursor: pointer;
+          width: 100%;
+        }
+
+        label{
+          width: 100%;
+          display: block;
+          margin-bottom: 1rem;
+        }
+
+        input, option, select, textarea{
+          padding: .5rem;
+          background: $cor-2;
+          border-radius: 5px;
+          border: 2px solid $border;
+        }
+
+        textarea{
+          width: 100%;
+          padding: 1rem;
+          height: 50ch;
+          resize: none;
+        }
+      }
+
+      #formButton{
+        padding: 1rem;
+        background: $cor-4;
+        font-family: $fonte-2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
